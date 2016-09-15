@@ -27,24 +27,28 @@ public class ListUtils{
 	}
 
 	public void afficheInverse(List<Integer> l) {
-		ListIterator<Integer> itr = l.listIterator();
-		String s="";
-		while(itr.hasPrevious()){
-			Integer tmp = itr.previous();
-			s+=tmp+"->";
-		}
-		System.out.println(s);
+		// TODO Auto-generated method stub
 		
 	}
+	/*public void afficheInverse(List<Integer> l) {
+		ListIterator<Integer> itr = l.listIterator();
+		while(itr.hasPrevious()){
+			System.out.print(itr.previous());
+		}
+	}*/
 
-	public Object somme(List<Integer> l) {
-		// TODO Auto-generated method stub
-		return null;
+	public int somme(List<Integer> l) {
+		ListIterator<Integer> itr = l.listIterator();
+		int somme = 0;
+		while (itr.hasNext()) {
+			somme += itr.next();
+		}
+		return somme;
 	}
 
-	public Object moyenne(List<Integer> l) {
-		// TODO Auto-generated method stub
-		return null;
+	public int moyenne(List<Integer> l) {
+		return somme(l)/l.size();
+		
 	}
 
 	public Object positions(List<Integer> l, int i) {
@@ -53,13 +57,25 @@ public class ListUtils{
 	}
 
 	public Object min(List<Integer> l) {
-		// TODO Auto-generated method stub
-		return null;
+		ListIterator<Integer> itr = l.listIterator();
+		int min = l.get(0);
+		while(itr.hasNext()){
+			if(itr.next()<min){
+				min = itr.next();
+			}
+		}
+		return min;
 	}
 
-	public Object max(List<Integer> l) {
-		// TODO Auto-generated method stub
-		return null;
+	public int max(List<Integer> l) {
+		ListIterator<Integer> itr = l.listIterator();
+		int max = l.get(0);
+		while(itr.hasNext()){
+			if(itr.next()>max){
+				max = itr.next();
+			}
+		}
+		return max;
 	}
 
 	public boolean estTrie(List<Integer> l) {
@@ -76,6 +92,8 @@ public class ListUtils{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
 	
 	
 
