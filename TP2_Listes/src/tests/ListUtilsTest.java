@@ -63,7 +63,6 @@ public class ListUtilsTest extends ListUtils {
 		l.add(24);
 		
 		String expected = "2 -> 45 -> 12 -> 58 -> 24";
-		
 		lUtils.affiche(l);
 		
 		assertEquals(expected + separator, os.toString());
