@@ -1,3 +1,4 @@
+package tests;
 /**
  * SDD Seance TP 2 :
  * @author <a href="mailto:Frederic.Guyomarch@univ-lille1.fr">FrÃ©dÃ©ric Guyomarch</a>, IUT-A, Universite de Lille
@@ -13,6 +14,8 @@ import java.util.Collections;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
+
+import main.ListUtils;
 
 
 public class ListUtilsTest extends ListUtils {

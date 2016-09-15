@@ -1,3 +1,4 @@
+package tests;
 /**
  * SDD Seance TP 2 :
  * @author <a href="mailto:Frederic.Guyomarch@univ-lille1.fr">FrÃ©dÃ©ric Guyomarch</a>, IUT-A, Universite de Lille
