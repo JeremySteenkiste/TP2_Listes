@@ -14,21 +14,26 @@ public class ListUtils{
 		return liste;
 	}
 
-	public String toString(List<Integer> list){
-		String s="";
-		s+=list.get(0);
-		for(int i=1;i<list.size();i++){
-			s+=" -> " + list.get(i);
-		}
-		return s;
-	}
-	
 	public void affiche(List<Integer> list){
-		System.out.println(toString(list));
+		ListIterator<Integer> itr = list.listIterator();
+		String s="";
+		while(itr.hasNext()){
+			s+=itr.next();
+			if(itr.hasNext()){
+				s+=" -> ";
+			}
+		}
+		System.out.println(s);
 	}
 
 	public void afficheInverse(List<Integer> l) {
-		
+		ListIterator<Integer> itr = l.listIterator();
+		String s="";
+		while(itr.hasPrevious()){
+			Integer tmp = itr.previous();
+			s+=tmp+"->";
+		}
+		System.out.println(s);
 		
 	}
 
